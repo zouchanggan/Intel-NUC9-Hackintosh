@@ -261,6 +261,8 @@
                 <false/>
                 <key>AvoidRuntimeDefrag</key>
                 <true/>
+                <key>ClearTaskSwitchBit</key>
+                <false/>
                 <key>DevirtualiseMmio</key>
                 <false/>
                 <key>DisableSingleUser</key>
@@ -305,7 +307,7 @@
         <dict>
             <key>Add</key>
             <dict>
-                <key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
+                <key>#PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
                 <dict>
                     <key>PP_PhmSoftPowerPlayTable</key>
                     <data>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</data>
@@ -334,7 +336,7 @@
                     <key>#核显驱动AAPL,ig-platform-id</key>
                     <data>BwCbPg==</data>
                     <key>AAPL,ig-platform-id</key>
-                    <data>AwCRPg==</data>
+                    <data>BwCbPg==</data>
                     <key>device-id</key>
                     <data>mz4AAA==</data>
                     <key>enable-hdmi20</key>
@@ -370,7 +372,7 @@
                     <key>BundlePath</key>
                     <string>Lilu.kext</string>
                     <key>Comment</key>
-                    <string>V1.7.0</string>
+                    <string>V1.7.2</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -388,7 +390,7 @@
                     <key>BundlePath</key>
                     <string>VirtualSMC.kext</string>
                     <key>Comment</key>
-                    <string>V1.3.4</string>
+                    <string>V1.3.8</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -406,7 +408,7 @@
                     <key>BundlePath</key>
                     <string>NVMeFix.kext</string>
                     <key>Comment</key>
-                    <string>V1.1.2 | NVMeFix.kext</string>
+                    <string>V1.1.4 | NVMeFix.kext</string>
                     <key>Enabled</key>
                     <false/>
                     <key>ExecutablePath</key>
@@ -424,7 +426,7 @@
                     <key>BundlePath</key>
                     <string>USBToolBox.kext</string>
                     <key>Comment</key>
-                    <string>V1.1.1</string>
+                    <string>V1.2.0</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -460,7 +462,7 @@
                     <key>BundlePath</key>
                     <string>AppleALC.kext</string>
                     <key>Comment</key>
-                    <string>V1.9.3</string>
+                    <string>V1.9.7</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -478,7 +480,7 @@
                     <key>BundlePath</key>
                     <string>RestrictEvents.kext</string>
                     <key>Comment</key>
-                    <string>V1.1.5</string>
+                    <string>V1.1.7</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -516,7 +518,7 @@
                     <key>Comment</key>
                     <string>V1.0</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/IOSkywalkFamily</string>
                     <key>MaxKernel</key>
@@ -534,7 +536,7 @@
                     <key>Comment</key>
                     <string>V1200.12.2b1</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/IO80211FamilyLegacy</string>
                     <key>MaxKernel</key>
@@ -552,27 +554,9 @@
                     <key>Comment</key>
                     <string>V1400.1.1</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/AirPortBrcmNIC</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string>24.0.0</string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
-                    <string>AirportItlwm_for_Sequoia.kext</string>
-                    <key>Comment</key>
-                    <string>V2.3.0</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string>Contents/MacOS/AirportItlwm</string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
@@ -676,7 +660,7 @@
                     <key>BundlePath</key>
                     <string>SMCProcessor.kext</string>
                     <key>Comment</key>
-                    <string>V1.3.4</string>
+                    <string>V1.3.8</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -694,7 +678,7 @@
                     <key>BundlePath</key>
                     <string>SMCSuperIO.kext</string>
                     <key>Comment</key>
-                    <string>V1.3.4</string>
+                    <string>V1.3.8</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -712,7 +696,7 @@
                     <key>BundlePath</key>
                     <string>WhateverGreen.kext</string>
                     <key>Comment</key>
-                    <string>V1.6.9</string>
+                    <string>V1.7.1</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -814,6 +798,24 @@
                     <key>PlistPath</key>
                     <string>Contents/Info.plist</string>
                 </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>BundlePath</key>
+                    <string>itlwm.kext</string>
+                    <key>Comment</key>
+                    <string>V2.3.0</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/itlwm</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string>24.0.0</string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
             </array>
             <key>Block</key>
             <array>
@@ -823,7 +825,7 @@
                     <key>Comment</key>
                     <string>Allow IOSkywalk Downgrade</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>Identifier</key>
                     <string>com.apple.iokit.IOSkywalkFamily</string>
                     <key>MaxKernel</key>

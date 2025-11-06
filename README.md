@@ -5,7 +5,7 @@
 |   规格    |                    详细信息                     |
 | :-------: | :---------------------------------------------: |
 | 电脑型号  | Intel NUC9 `NUC9i5QNX` `NUC9i7QNX` `NUC9i9QNX`  |
-| 操作系统  |     macOS `Sonoma` / `Ventura` / `Monterey`     |
+| 操作系统  |     macOS `Tahoe` `Sequoia` `Sonoma` / `Ventura` / `Monterey`     |
 |  处理器   |    Intel `i5-9300` / `i7-9750` / `i9-9980HK`    |
 |   内存    |             64 GB DDR4 2666-3200MHz             |
 | 硬盘1/2/3 |              支持多至三个 m.2 NVMe              |
@@ -18,11 +18,17 @@
 
 ## 更新日志
 
+- 11-5-2025
+  - 更新 `OpenCore` `v1.0.6`
+  - 支持 `Tahoe` (Intel 无线网卡) 
+    - `Tahoe` 和 `Sequoia` 下使用`itlmw` + `HeliPort`的方法驱动
 - 11-23-2024
   - 更新 `OpenCore` `v1.0.2`
   - 更新 `I210` 驱动
   - `Sequoia` 请安装支持 `AX200` 的特别版本，[OCLP for Intel](https://pan.daliansky.net/d/APPS/OCLP/OpenCore-Patcher_v1.6.0_for_Intel.pkg)
-  
+- 9-26-2024
+  - 更新 `OpenCore` `v1.0.1`
+  - 支持 `Sequoia`
 - 3-12-2024
   - 更新 `OpenCore` `v0.9.9`
   - 更新 `I219-LM` 驱动
